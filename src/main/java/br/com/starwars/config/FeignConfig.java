@@ -1,4 +1,4 @@
-package br.com.starwars.core.usecase;
+package br.com.starwars.config;
 
 import br.com.starwars.infrastructure.handle.FeignExceptionHandler;
 import feign.Logger;

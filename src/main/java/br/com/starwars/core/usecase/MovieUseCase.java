@@ -23,9 +23,7 @@ public class MovieUseCase {
     public void loadAll() {
         SWAPIMovieResponseDTO response = swapiClient.allMovies();
         List<Movie> movies = response.getResults();
-        for (Movie movie : movies) {
-            movieRepository.save(movie);
-        }
+        movies.forEach(movieRepository::save);
     }
 
     public List<Movie> getAll() {

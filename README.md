@@ -14,8 +14,13 @@ It allows users to retrieve details about movies, characters, starships, and mor
 
 ---
 
-## 🛠️  Access the API documentation
-- Swagger UI: `http://localhost:8080/swagger-ui.html`
+## 🛠️ How to Run
+
+1. **Clone the repository**:  
+  git clone https://github.com/martini-rodrigo/star-wars-api.git
+
+2. Access the API documentation:
+ - Swagger UI: `http://localhost:8080/swagger-ui.html`
 
 
 

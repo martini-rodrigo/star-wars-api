@@ -15,7 +15,7 @@ It allows users to retrieve details about movies, characters, starships, and mor
 ---
 
 ## 🧪  Access the API documentation
-- Swagger UI: `http://localhost:8088/swagger-ui.html`
+- Swagger UI: `http://localhost:8080/swagger-ui.html`
 
 
 

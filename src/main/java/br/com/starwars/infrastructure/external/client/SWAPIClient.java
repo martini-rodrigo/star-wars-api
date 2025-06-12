@@ -1,6 +1,6 @@
-package br.com.starwars.infrastructure.client;
+package br.com.starwars.infrastructure.external.client;
 
-import br.com.starwars.core.dto.SWAPIMovieResponseDTO;
+import br.com.starwars.infrastructure.external.dto.SWAPIMovieResponseDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 

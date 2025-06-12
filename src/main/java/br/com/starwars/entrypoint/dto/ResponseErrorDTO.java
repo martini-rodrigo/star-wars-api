@@ -1,4 +1,4 @@
-package br.com.starwars.core.dto;
+package br.com.starwars.entrypoint.dto;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;

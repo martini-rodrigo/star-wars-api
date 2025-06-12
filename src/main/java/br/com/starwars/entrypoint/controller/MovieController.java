@@ -1,7 +1,7 @@
 package br.com.starwars.entrypoint.controller;
 
-import br.com.starwars.core.domain.Movie;
-import br.com.starwars.core.dto.MovieUpdateDTO;
+import br.com.starwars.core.domain.entity.Movie;
+import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
 import br.com.starwars.core.usecase.MovieUseCase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

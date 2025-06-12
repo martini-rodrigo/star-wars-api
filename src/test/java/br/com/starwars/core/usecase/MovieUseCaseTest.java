@@ -1,11 +1,11 @@
 package br.com.starwars.core.usecase;
 
-import br.com.starwars.core.domain.Movie;
-import br.com.starwars.core.dto.MovieUpdateDTO;
-import br.com.starwars.core.dto.SWAPIMovieResponseDTO;
-import br.com.starwars.core.exception.NotFoundException;
-import br.com.starwars.infrastructure.client.SWAPIClient;
-import br.com.starwars.infrastructure.repository.MovieRepository;
+import br.com.starwars.core.domain.entity.Movie;
+import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
+import br.com.starwars.infrastructure.external.dto.SWAPIMovieResponseDTO;
+import br.com.starwars.core.domain.exception.NotFoundException;
+import br.com.starwars.infrastructure.external.client.SWAPIClient;
+import br.com.starwars.core.repository.MovieRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

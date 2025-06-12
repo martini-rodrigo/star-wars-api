@@ -1,6 +1,8 @@
-package br.com.starwars.core.exception;
+package br.com.starwars.entrypoint.handle;
 
-import br.com.starwars.core.dto.ResponseErrorDTO;
+import br.com.starwars.core.domain.exception.BadRequestException;
+import br.com.starwars.core.domain.exception.NotFoundException;
+import br.com.starwars.entrypoint.dto.ResponseErrorDTO;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

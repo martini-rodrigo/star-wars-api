@@ -1,7 +1,7 @@
-package br.com.starwars.infrastructure.handle;
+package br.com.starwars.infrastructure.external.handle;
 
-import br.com.starwars.core.exception.BadRequestException;
-import br.com.starwars.core.exception.NotFoundException;
+import br.com.starwars.core.domain.exception.BadRequestException;
+import br.com.starwars.core.domain.exception.NotFoundException;
 import feign.FeignException;
 import feign.Response;
 import feign.codec.ErrorDecoder;

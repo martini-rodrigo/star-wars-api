@@ -1,4 +1,4 @@
-package br.com.starwars.core.domain;
+package br.com.starwars.core.domain.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

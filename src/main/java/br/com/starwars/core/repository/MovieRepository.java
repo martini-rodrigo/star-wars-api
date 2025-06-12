@@ -1,8 +1,8 @@
-package br.com.starwars.infrastructure.repository;
+package br.com.starwars.core.repository;
 
-import br.com.starwars.core.domain.Movie;
-import br.com.starwars.core.dto.MovieUpdateDTO;
-import br.com.starwars.core.exception.NotFoundException;
+import br.com.starwars.core.domain.entity.Movie;
+import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
+import br.com.starwars.core.domain.exception.NotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;

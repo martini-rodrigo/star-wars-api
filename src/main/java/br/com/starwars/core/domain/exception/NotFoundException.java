@@ -1,4 +1,4 @@
-package br.com.starwars.core.exception;
+package br.com.starwars.core.domain.exception;
 
 import java.io.Serial;
 

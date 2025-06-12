@@ -1,4 +1,4 @@
-package br.com.starwars.core.dto;
+package br.com.starwars.entrypoint.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.NotBlank;

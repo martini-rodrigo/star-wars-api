@@ -1,6 +1,6 @@
-package br.com.starwars.config;
+package br.com.starwars.infrastructure.config;
 
-import br.com.starwars.infrastructure.handle.FeignExceptionHandler;
+import br.com.starwars.infrastructure.external.handle.FeignExceptionHandler;
 import feign.Logger;
 import feign.Retryer;
 import feign.codec.ErrorDecoder;

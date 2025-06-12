@@ -1,4 +1,4 @@
-package br.com.starwars.entrypoint.handle;
+package br.com.starwars.entrypoint.handler;
 
 import br.com.starwars.core.domain.exception.BadRequestException;
 import br.com.starwars.core.domain.exception.NotFoundException;

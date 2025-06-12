@@ -1,4 +1,4 @@
-package br.com.starwars.infrastructure.external.handle;
+package br.com.starwars.infrastructure.external.handler;
 
 import br.com.starwars.core.domain.exception.BadRequestException;
 import br.com.starwars.core.domain.exception.NotFoundException;

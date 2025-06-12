@@ -1,8 +1,8 @@
 package br.com.starwars.entrypoint.controller;
 
 import br.com.starwars.core.domain.entity.Movie;
+import br.com.starwars.core.usecase.IMovieUseCase;
 import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
-import br.com.starwars.core.usecase.MovieUseCase;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MovieController {
 
-    private final MovieUseCase movieUseCase;
+    private final IMovieUseCase movieUseCase;
 
     @GetMapping
     public ResponseEntity<List<Movie>> getAll() {

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.concurrent.TimeUnit;
 
 @Configuration
-@EnableFeignClients("br.com.starwars.infrastructure.client")
+@EnableFeignClients("br.com.starwars.infrastructure.external.client")
 public class FeignConfig {
 
     @Bean

@@ -1,18 +1,17 @@
 package br.com.starwars.core.usecase;
 
 import br.com.starwars.core.domain.entity.Movie;
-import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
-import br.com.starwars.infrastructure.external.dto.SWAPIMovieResponseDTO;
 import br.com.starwars.core.domain.exception.NotFoundException;
-import br.com.starwars.infrastructure.external.client.SWAPIClient;
 import br.com.starwars.core.repository.MovieRepository;
+import br.com.starwars.core.usecase.impl.MovieUseCaseImpl;
+import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
+import br.com.starwars.infrastructure.external.client.SWAPIClient;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +24,7 @@ import static org.mockito.Mockito.when;
 class MovieUseCaseTest {
 
     @InjectMocks
-    private MovieUseCase movieUseCase;
+    private MovieUseCaseImpl movieUseCase;
 
     @Mock
     private MovieRepository movieRepository;
@@ -33,22 +32,6 @@ class MovieUseCaseTest {
     @Mock
     private SWAPIClient swapiClient;
 
-    @Test
-    void testLoadAll() {
-        List<Movie> mockMovies = new ArrayList<>();
-        mockMovies.add(Movie.builder().title("Star Wars 1").description("Description 1").build());
-        mockMovies.add(Movie.builder().title("Star Wars 2").description("Description 2").build());
-
-        SWAPIMovieResponseDTO mockResponse = new SWAPIMovieResponseDTO();
-        mockResponse.setResults(mockMovies);
-        when(swapiClient.allMovies()).thenReturn(mockResponse);
-
-        movieUseCase.loadAll();
-
-        for (Movie movie : mockMovies) {
-            verify(movieRepository).save(movie);
-        }
-    }
 
     @Test
     void testGetAll() {

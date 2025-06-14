@@ -3,7 +3,7 @@ package br.com.starwars.core.movie.usecase;
 import br.com.starwars.core.exception.NotFoundException;
 import br.com.starwars.core.movie.domain.Movie;
 import br.com.starwars.core.movie.port.MovieRepositoryPort;
-import br.com.starwars.core.movie.usecase.impl.GetMovieByTitleCaseImpl;
+import br.com.starwars.core.movie.usecase.impl.GetMovieByTitleUseCaseImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -16,10 +16,10 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class GetMovieByTitleUseCaseTest {
+public class GetMovieByTitleUseUseCaseTest {
 
     @InjectMocks
-    private GetMovieByTitleCaseImpl getMovieByTitleCase;
+    private GetMovieByTitleUseCaseImpl getMovieByTitleCase;
 
     @Mock
     private MovieRepositoryPort movieRepository;

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @RequiredArgsConstructor
-public class GetMovieByTitleCaseImpl implements GetMovieByTitleUseCase {
+public class GetMovieByTitleUseCaseImpl implements GetMovieByTitleUseCase {
 
     private final MovieRepositoryPort movieRepository;
 

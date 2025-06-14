@@ -1,4 +1,4 @@
-package br.com.starwars.adapters.repository.jpa;
+package br.com.starwars.adapters.repository.persistence;
 
 import br.com.starwars.core.movie.domain.Movie;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package br.com.starwars.adapters.repository.adapter;
+package br.com.starwars.adapters.external.adapter;
 
 import br.com.starwars.adapters.external.client.SWAPIClient;
 import br.com.starwars.adapters.external.dto.SWAPIMovieResponseDTO;

@@ -1,7 +1,7 @@
 package br.com.starwars.adapters.repository.adapter;
 
 
-import br.com.starwars.adapters.repository.jpa.MovieRepository;
+import br.com.starwars.adapters.repository.persistence.MovieRepository;
 import br.com.starwars.core.movie.domain.Movie;
 import br.com.starwars.core.movie.port.MovieRepositoryPort;
 import lombok.RequiredArgsConstructor;

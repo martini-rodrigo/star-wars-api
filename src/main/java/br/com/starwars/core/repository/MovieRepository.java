@@ -16,7 +16,7 @@ public class MovieRepository {
 
     public List<Movie> findAll() {
         log.info("Finding all movies. Total movies: {}", movies.size());
-        return new ArrayList<>(movies);
+        return new ArrayList<>(movies); // avoid  modifications to the original list
     }
 
     public Optional<Movie> findByTitle(String title) {

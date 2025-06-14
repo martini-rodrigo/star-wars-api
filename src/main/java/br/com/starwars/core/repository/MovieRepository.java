@@ -1,8 +1,6 @@
 package br.com.starwars.core.repository;
 
 import br.com.starwars.core.domain.entity.Movie;
-import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
-import br.com.starwars.core.domain.exception.NotFoundException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -25,15 +23,8 @@ public class MovieRepository {
     }
 
     public void save(Movie movie) {
-        movies.add(movie);
-    }
-
-    public void update(MovieUpdateDTO movieUpdateDTO) {
-        Movie toUpdateMovie = findByTitle(movieUpdateDTO.getTitle())
-                .orElseThrow(() -> new NotFoundException("Movie {0} not found.", movieUpdateDTO.getTitle()));
-        if (!movieUpdateDTO.getDescription().equals(toUpdateMovie.getDescription())) {
-            toUpdateMovie.setDescription(movieUpdateDTO.getDescription());
-            toUpdateMovie.setVersion(toUpdateMovie.getVersion() + 1); // Increase the version
+        if (!movies.contains(movie)) {
+            movies.add(movie);
         }
     }
 

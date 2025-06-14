@@ -29,6 +29,12 @@ public class MovieUseCaseImpl implements IMovieUseCase {
 
     @Override
     public void updateDescription(MovieUpdateDTO movieUpdateDTO) {
-        movieRepository.update(movieUpdateDTO);
+        Movie movie = getDetails(movieUpdateDTO.getTitle());
+
+        if (!movieUpdateDTO.getDescription().equals(movie.getDescription())) {
+            movie.setDescription(movieUpdateDTO.getDescription());
+            movie.setVersion(movie.getVersion() + 1);
+        }
+        movieRepository.save(movie);
     }
 }

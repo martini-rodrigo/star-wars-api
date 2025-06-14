@@ -17,6 +17,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
@@ -56,18 +57,21 @@ class MovieUseCaseTest {
 
     @Test
     void testGetDetails_MovieNotFound() {
-        String title = "Non Existing Movie";
+        String title = "Star Wars";
         when(movieRepository.findByTitle(title)).thenReturn(Optional.empty());
 
         NotFoundException exception = assertThrows(NotFoundException.class, () -> movieUseCase.getDetails(title));
-        assertEquals("Movie Non Existing Movie not found.", exception.getMessage());
+        assertEquals("Movie Star Wars not found.", exception.getMessage());
     }
 
     @Test
     void testUpdateDescription() {
+        Movie mockMovie = Movie.builder().title("Star Wars").description("Description 1").build();
+        when(movieRepository.findByTitle("Star Wars")).thenReturn(Optional.of(mockMovie));
+
         MovieUpdateDTO updateDTO = new MovieUpdateDTO("Star Wars", "Description");
 
         movieUseCase.updateDescription(updateDTO);
-        verify(movieRepository).update(updateDTO);
+        verify(movieRepository).save(any(Movie.class));
     }
 }

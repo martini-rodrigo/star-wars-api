@@ -36,8 +36,11 @@ public class MovieUseCaseImpl implements IMovieUseCase {
         if (!movieUpdateDTO.getDescription().equals(movie.getDescription())) {
             movie.setDescription(movieUpdateDTO.getDescription());
             movie.setVersion(movie.getVersion() + 1);
+
+            movieRepository.save(movie);
+            log.info("Movie {} updated successfully.", movie.getTitle());
+        } else {
+            log.info("No changes made to the description for movie {}", movie.getTitle());
         }
-        movieRepository.save(movie);
-        log.info("Movie {} updated successfully.", movie.getTitle());
     }
 }

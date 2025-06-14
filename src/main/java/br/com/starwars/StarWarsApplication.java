@@ -1,6 +1,6 @@
 package br.com.starwars;
 
-import br.com.starwars.core.service.MovieSyncService;
+import br.com.starwars.core.movie.service.MovieSyncService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

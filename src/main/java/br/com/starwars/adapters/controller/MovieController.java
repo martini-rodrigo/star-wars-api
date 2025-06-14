@@ -6,6 +6,7 @@ import br.com.starwars.core.movie.usecase.GetMovieByTitleUseCase;
 import br.com.starwars.core.movie.usecase.ListMoviesUseCase;
 import br.com.starwars.core.movie.usecase.UpdateMovieUseCase;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/movies")
 @RequiredArgsConstructor
+@Tag(name = "Movies", description = "API for managing movies")
 public class MovieController {
 
     private final ListMoviesUseCase listMoviesUseCase;

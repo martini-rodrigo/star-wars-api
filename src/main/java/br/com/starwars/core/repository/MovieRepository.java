@@ -28,7 +28,7 @@ public class MovieRepository {
 
     public void save(Movie movie) {
         if (!movies.contains(movie)) {
-            log.info("Adding movie: {}", movie.getTitle());
+            log.info("Saving movie: {}", movie.getTitle());
             movies.add(movie);
         }
     }

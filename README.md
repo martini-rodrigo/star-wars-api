@@ -23,6 +23,17 @@ This project allows users to retrieve details about movies. The goal is to lever
 
 2. Access the API documentation:
  - Swagger UI: `http://localhost:8080/swagger-ui.html`
+---
+
+## 🧪 Running Tests
+
+Unit and integration tests are executed with:
+
+```bash
+mvn test
+```
+
+---
 
 
 

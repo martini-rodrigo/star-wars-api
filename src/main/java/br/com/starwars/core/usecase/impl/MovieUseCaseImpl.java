@@ -6,10 +6,12 @@ import br.com.starwars.core.repository.MovieRepository;
 import br.com.starwars.core.usecase.IMovieUseCase;
 import br.com.starwars.entrypoint.dto.MovieUpdateDTO;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class MovieUseCaseImpl implements IMovieUseCase {
@@ -36,5 +38,6 @@ public class MovieUseCaseImpl implements IMovieUseCase {
             movie.setVersion(movie.getVersion() + 1);
         }
         movieRepository.save(movie);
+        log.info("Movie {} updated successfully.", movie.getTitle());
     }
 }

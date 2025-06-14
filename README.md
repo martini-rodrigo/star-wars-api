@@ -1,8 +1,9 @@
-#  Star Wars API
+# Star Wars API
 
 ## Overview
 
-It allows users to retrieve details about movies, characters, starships, and more. This project aims to utilize data from the SWAPI (Star Wars API) and present it in a structured format.
+This project allows users to retrieve details about movies. The goal is to leverage data from the SWAPI (Star Wars API) and present it in a structured format. The API is developed following the principles of Hexagonal Architecture, Clean Architecture, and DDD (Domain-Driven Design), enabling a clear and modular organization of the code.
+
 ---
 
 ## 📦 Technologies Used
@@ -16,8 +17,9 @@ It allows users to retrieve details about movies, characters, starships, and mor
 
 ## 🛠️ How to Run
 
-1. **Clone the repository**:  
-  git clone https://github.com/martini-rodrigo/star-wars-api.git
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/martini-rodrigo/star-wars-api.git
 
 2. Access the API documentation:
  - Swagger UI: `http://localhost:8080/swagger-ui.html`
